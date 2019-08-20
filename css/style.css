@@ -395,6 +395,10 @@ table {
   border-spacing: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   color: white;
@@ -409,7 +413,7 @@ a {
 }
 
 .container {
-  width: 1100px;
+  width: 1024px;
   margin: 0 auto;
 }
 
@@ -418,6 +422,7 @@ a {
   width: 100%;
   height: 75px;
   position: fixed;
+  z-index: 999;
 }
 .cabecalho .container {
   display: flex;
@@ -458,7 +463,7 @@ a {
 }
 
 .home {
-  display: none;
+  display: block;
 }
 .home .container {
   height: 100vh;
@@ -466,22 +471,11 @@ a {
   align-items: center;
   justify-content: center;
 }
-.home .container .content-home::before {
-  display: block;
-  content: "";
-  width: 780px;
-  height: 450px;
-  background-color: white;
-  position: relative;
-  z-index: -998;
-  top: 495px;
-  left: -15px;
-}
 .home .container .content-home {
   display: block;
-  position: relative;
-  top: -200px;
-  width: 750px;
+  width: 780px;
+  background-image: linear-gradient(360deg, white 95%, rgba(0, 0, 0, 0) 5%);
+  padding-bottom: 20px;
 }
 .home .container .content-home h1 {
   font-size: 2.25em;
@@ -489,12 +483,16 @@ a {
   color: white;
   background-color: #856629;
   border: 1px solid white;
+  width: 750px;
+  margin: 0 auto;
   padding: 30px 20px;
   text-align: center;
 }
 .home .container .content-home .content-home-text {
   background-color: #1a2d4b;
   border: 1px solid white;
+  width: 750px;
+  margin: 0 auto;
   padding: 20px 50px;
 }
 .home .container .content-home .content-home-text p {
@@ -540,11 +538,12 @@ a {
   background-color: #1a2d4b;
   border: 1px solid white;
   width: calc(100% - 100px);
+  height: 250px;
   margin: 0 auto;
   padding: 40px;
   position: relative;
   top: -50px;
-  z-index: -998;
+  z-index: 1;
 }
 
 .about-two {
@@ -579,7 +578,7 @@ a {
   font-size: 1.2em;
   padding: 30px 40px;
   margin: 20px 0;
-  height: calc(250px - 80px);
+  height: calc(300px - 80px);
 }
 .about-three .content-about-three .cor-1 {
   background-color: #1a2d4b;
@@ -595,6 +594,7 @@ a {
 }
 
 .gallery {
+  display: none;
   padding-top: 500px;
 }
 .gallery .container {
@@ -612,21 +612,11 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.gallery .container .content-gallery .quadro-branco-first {
-  display: block;
-  width: 50%;
-  height: 138px;
-  background-color: white;
-  position: relative;
-  z-index: -998;
-  bottom: -178px;
-  right: 20px;
-}
 .gallery .container .content-gallery .title-gallery {
   display: block;
-  width: calc(100% - 80px);
+  width: 100%;
   height: 138px;
-  background-color: white;
+  background-image: linear-gradient(90deg, white 50%, rgba(0, 0, 0, 0) 50%);
   margin: 50px 0;
 }
 .gallery .container .content-gallery .title-gallery h1 {
@@ -635,7 +625,7 @@ a {
   color: white;
   background-color: #1a2d4b;
   border: 1px solid white;
-  width: calc(100% - 20px);
+  width: calc(100% - 100px);
   padding: 40px;
   position: relative;
   top: 10px;
@@ -657,6 +647,78 @@ a {
   width: calc(25% - 20px);
   height: 225px;
   margin: 10px 0;
+}
+
+.contact {
+  display: none;
+}
+.contact .container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-content h1 {
+  width: 100%;
+  font-size: 2.25em;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+  padding: 40px 50px;
+  margin-bottom: 40px;
+}
+.contact-content .contact-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a2d4b;
+}
+.contact-content .contact-data .contact-info {
+  height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 30px 0 30px 30px;
+}
+.contact-content .contact-data .contact-info p {
+  line-height: 30px;
+  font-size: 1.25em;
+}
+.contact-content .contact-data .formulario {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 750px;
+  margin: 20px 30px;
+}
+.contact-content .contact-data .formulario .nome {
+  height: 50px;
+  padding: 0 20px;
+  margin: 10px 0;
+}
+.contact-content .contact-data .formulario .email {
+  height: 50px;
+  padding: 0 20px;
+  margin: 10px 0;
+}
+.contact-content .contact-data .formulario .message {
+  padding: 20px;
+  margin: 10px 0;
+  resize: none;
+}
+.contact-content .contact-data .formulario .enviar {
+  background-color: #856629;
+  border: none;
+  font-size: 1.75em;
+  font-weight: 300;
+  color: white;
+  height: 50px;
+  width: 150px;
+  padding: 0 20px;
+  margin: 10px 0;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
