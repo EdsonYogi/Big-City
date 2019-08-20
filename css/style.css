@@ -544,7 +544,7 @@ a {
   padding: 40px;
   position: relative;
   top: -50px;
-  z-index: -999;
+  z-index: -998;
 }
 
 .about-two {
@@ -594,31 +594,68 @@ a {
   color: black;
 }
 
+.gallery {
+  padding-top: 500px;
+}
 .gallery .container {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.gallery .container .first-gallery {
+.gallery .container .content-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery .container .content-gallery .first-gallery, .gallery .container .content-gallery .second-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.gallery .container .first-gallery h1 {
-  width: 100%;
+.gallery .container .content-gallery .quadro-branco-first {
+  display: block;
+  width: 50%;
+  height: 138px;
+  background-color: white;
+  position: relative;
+  z-index: -998;
+  bottom: -178px;
+  right: 20px;
+}
+.gallery .container .content-gallery .title-gallery {
+  display: block;
+  width: calc(100% - 80px);
+  height: 138px;
+  background-color: white;
+  margin: 50px 0;
+}
+.gallery .container .content-gallery .title-gallery h1 {
   font-size: 2.25em;
   font-weight: 500;
   color: white;
   background-color: #1a2d4b;
   border: 1px solid white;
+  width: calc(100% - 20px);
   padding: 40px;
+  position: relative;
+  top: 10px;
+  left: 20px;
 }
-.gallery .container .first-gallery img {
+.gallery .container .content-gallery .img-group-one {
   width: calc(33.33% - 30px);
   height: 225px;
   padding: 10px;
   background-color: white;
+  margin: 10px 0;
+}
+.gallery .container .content-gallery .img-group-two {
+  width: calc(50% - 15px);
+  height: 250px;
+  margin: 10px 0;
+}
+.gallery .container .content-gallery .img-group-three {
+  width: calc(25% - 20px);
+  height: 225px;
   margin: 10px 0;
 }
 
