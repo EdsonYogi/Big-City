@@ -23,15 +23,20 @@
   justify-content: center;
 }
 
+@mixin espacamento {
+  display: flex;
+  justify-content: space-between;
+}
+
 @mixin title {
   font-size: 2.25em;
   font-weight: 500;
-  color: white;
 }
 
 @mixin sub-title {
   font-size: 1.75em;
   font-weight: 500;
+  color: black;
 }
 
 @mixin texto {
