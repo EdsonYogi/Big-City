@@ -450,7 +450,11 @@ a {
 .navegacao .menu .list-menu li a:hover {
   background-color: #1a2d4b;
   height: 100px;
-  animation-duration: 2s;
+  transition-duration: 0.4s;
+}
+.navegacao .menu .list-menu li a.item-ativo {
+  background-color: #1a2d4b;
+  height: 100px;
 }
 
 .video-fundo #myVideo {
@@ -466,7 +470,9 @@ a {
   display: none;
 }
 .home .container {
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
+  padding: 0 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -505,10 +511,12 @@ a {
 
 .about {
   display: none;
-  padding-top: 600px;
+  padding-top: 200px;
 }
 .about .container {
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
+  padding: 0 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -592,10 +600,12 @@ a {
 
 .gallery {
   display: none;
-  padding-top: 600px;
+  padding-top: 100px;
 }
 .gallery .container {
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
+  padding: 0 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -646,10 +656,12 @@ a {
 }
 
 .contact {
-  display: block;
+  display: none;
 }
 .contact .container {
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
+  padding: 0 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -712,6 +724,56 @@ a {
   padding: 0 20px;
   margin: 10px 0;
   cursor: pointer;
+}
+
+.rodape {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+}
+.rodape .copyright {
+  margin: 30px;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.home.section-ativo-right,
+.about.section-ativo-right,
+.gallery.section-ativo-right,
+.contact.section-ativo-right {
+  display: block;
+  animation: move-section-right 1s;
+  animation-direction: alternate;
+  position: relative;
+}
+
+@keyframes move-section-right {
+  from {
+    right: -1500px;
+  }
+  to {
+    right: 0px;
+  }
+}
+.home.section-ativo-left,
+.about.section-ativo-left,
+.gallery.section-ativo-left,
+.contact.section-ativo-left {
+  display: block;
+  animation: move-section-left 1s;
+  animation-direction: alternate;
+  position: relative;
+}
+
+@keyframes move-section-left {
+  from {
+    left: -1500px;
+  }
+  to {
+    left: 0px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

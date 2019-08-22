@@ -55,8 +55,12 @@ a {
           &:hover {
             background-color: $color-main;
             height: 100px;
-            animation-duration: 2s;
+            transition-duration: 0.4s;
           }
+        }
+        a.item-ativo {
+          background-color: $color-main;
+          height: 100px;
         }
       }
     }
@@ -68,6 +72,8 @@ a {
     @include video-background;
   }
 }
+
+
 
 .home {
   display: none;
@@ -106,7 +112,7 @@ a {
 
 .about {
   display: none;
-  padding-top: 600px;
+  padding-top: 200px;
   .container {
     @include container-content;
   }
@@ -177,7 +183,7 @@ a {
 
 .gallery {
   display: none;
-  padding-top: 600px;
+  padding-top: 100px;
   .container {
     @include container-content;
     .content-gallery {
@@ -225,7 +231,7 @@ a {
 }
 
 .contact {
-  display: block;
+  display: none;
   .container {
     @include container-content;
   }
@@ -285,4 +291,48 @@ a {
       }
     }
   }
+}
+
+.rodape {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  .copyright {
+    margin: 30px;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.50);
+    padding: 10px;
+  }
+}
+
+.home.section-ativo-right,
+.about.section-ativo-right,
+.gallery.section-ativo-right,
+.contact.section-ativo-right {
+  display: block;
+  animation: move-section-right 1s;
+  animation-direction: alternate;
+  position: relative;
+}
+
+@keyframes move-section-right  {
+  from {right: -1500px;}
+  to {right: 0px;}
+}
+
+.home.section-ativo-left,
+.about.section-ativo-left,
+.gallery.section-ativo-left,
+.contact.section-ativo-left {
+  display: block;
+  animation: move-section-left 1s;
+  animation-direction: alternate;
+  position: relative;
+}
+
+
+@keyframes move-section-left {
+  from {left: -1500px;}
+  to {left: 0px;}
 }

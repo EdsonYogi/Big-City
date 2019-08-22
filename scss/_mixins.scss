@@ -4,7 +4,9 @@
 }
 
 @mixin container-content {
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
+  padding: 0 10px;
   @include position-center;
 }
 

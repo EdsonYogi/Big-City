@@ -14,10 +14,10 @@
       <nav class="navegacao">
         <div class="menu">
           <ul class="list-menu">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Gallery</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#home" class="item-ativo-right">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -29,7 +29,7 @@
       Your browser does not support HTML5 video.
     </video>
   </section>
-  <section class="home">
+  <section class="home section-ativo-right" id="home" data-section="menu">
     <div class="container">
       <div class="content-home">
         <h1>Welcome to BIG city!</h1>
@@ -41,7 +41,7 @@
       </div>
     </div>
   </section>
-  <section class="about">
+  <section class="about" id="about" data-section="menu">
     <div class="container">
       <div class="content-about">
         <div class="about-one">
@@ -81,7 +81,7 @@
       </div>
     </div>
   </section>
-  <section class="gallery">
+  <section class="gallery" id="gallery" data-section="menu">
     <div class="container">
       <div class="content-gallery">
         <div class="first-gallery">
@@ -109,7 +109,7 @@
       </div>
     </div>
   </section>
-  <section class="contact">
+  <section class="contact" id="contact" data-section="menu">
     <div class="container">
       <div class="contact-content">
         <h1>Contact Us</h1>
@@ -132,5 +132,9 @@
       </div>
     </div>
   </section>
+  <footer class="rodape">
+    <p class="copyright">Copyright © 2019 Your Company | Design: Tooplate</p>
+  </footer>
+  <script src="./js/script.js"></script>
 </body>
 </html>
