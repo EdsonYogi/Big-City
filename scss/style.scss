@@ -12,7 +12,8 @@ body {
   color: $font-color-main;
 }
 
-:visited {
+:visited,
+:link {
   color: $font-color-main;
 }
 
@@ -52,10 +53,10 @@ a {
           width: 175px;
           height: 75px;
           font-size: 1.25em;
+          transition: all 0.50s ease;
           &:hover {
-            background-color: $color-main;
             height: 100px;
-            transition-duration: 0.4s;
+            background-color: $color-main;
           }
         }
         a.item-ativo {
@@ -72,8 +73,6 @@ a {
     @include video-background;
   }
 }
-
-
 
 .home {
   display: none;
@@ -278,7 +277,7 @@ a {
         resize: none;
       }
       .enviar {
-        background-color: #856629;
+        background-color: rgba(132, 102, 40, 1);
         border: none;
         font-size: 1.75em;
         font-weight: 300;
@@ -288,6 +287,10 @@ a {
         padding: 0 20px;
         margin: 10px 0;
         cursor: pointer;
+        transition: all 0.50s ease;
+        &:hover {
+          background-color: rgb(165, 138, 49);
+        }
       }
     }
   }

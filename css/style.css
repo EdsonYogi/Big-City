@@ -404,7 +404,8 @@ body {
   color: white;
 }
 
-:visited {
+:visited,
+:link {
   color: white;
 }
 
@@ -446,11 +447,11 @@ a {
   width: 175px;
   height: 75px;
   font-size: 1.25em;
+  transition: all 0.5s ease;
 }
 .navegacao .menu .list-menu li a:hover {
-  background-color: #1a2d4b;
   height: 100px;
-  transition-duration: 0.4s;
+  background-color: #1a2d4b;
 }
 .navegacao .menu .list-menu li a.item-ativo {
   background-color: #1a2d4b;
@@ -714,7 +715,7 @@ a {
   resize: none;
 }
 .contact-content .contact-data .formulario .enviar {
-  background-color: #856629;
+  background-color: #846628;
   border: none;
   font-size: 1.75em;
   font-weight: 300;
@@ -724,6 +725,10 @@ a {
   padding: 0 20px;
   margin: 10px 0;
   cursor: pointer;
+  transition: all 0.5s ease;
+}
+.contact-content .contact-data .formulario .enviar:hover {
+  background-color: #a58a31;
 }
 
 .rodape {
