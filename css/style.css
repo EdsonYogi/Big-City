@@ -416,8 +416,16 @@ a {
 .container {
   width: 1024px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
+@media only screen and (max-width: 1023px) {
+  .container {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
 .cabecalho {
   background-color: rgba(26, 45, 75, 0.75);
   width: 100%;
@@ -437,8 +445,29 @@ a {
   color: white;
 }
 
+.navegacao .menu .menu-mobile {
+  display: none;
+  position: absolute;
+  font-size: 2em;
+  padding: 21px 25px;
+  right: 0;
+}
+.navegacao .menu .menu-mobile:hover {
+  background-color: #1a2d4b;
+}
 .navegacao .menu .list-menu {
   display: flex;
+}
+.navegacao .menu .list-menu .menu-mobile-close {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  margin: 5px;
+  padding: 10px;
+  font-size: 2em;
+  cursor: pointer;
 }
 .navegacao .menu .list-menu li a {
   display: flex;
@@ -458,6 +487,44 @@ a {
   height: 100px;
 }
 
+@media only screen and (max-width: 1023px) {
+  .navegacao .menu .menu-mobile {
+    display: block;
+  }
+  .navegacao .menu .list-menu {
+    display: none;
+    background-color: #1a2d4b;
+    width: 40vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    border-left: 2px solid white;
+    padding-top: 75px;
+  }
+  .navegacao .menu .list-menu .menu-mobile-close {
+    display: block;
+  }
+  .navegacao .menu .list-menu li a {
+    transition: width 1s ease;
+  }
+  .navegacao .menu .list-menu li a:hover {
+    background-color: #e1e1e1;
+    color: #1a2d4b;
+    height: 75px;
+    width: 100%;
+    font-weight: bold;
+  }
+  .navegacao .menu .list-menu li a.item-ativo {
+    background-color: #e1e1e1;
+    color: #1a2d4b;
+    height: 75px;
+    width: 100%;
+    font-weight: bold;
+  }
+  .navegacao .menu .list-menu.menu-mobile-ativo {
+    display: block;
+  }
+}
 .video-fundo #myVideo {
   position: fixed;
   right: 0;
@@ -756,7 +823,7 @@ a {
 
 @keyframes move-section-right {
   from {
-    right: -1500px;
+    right: 1500px;
   }
   to {
     right: 0px;
@@ -774,7 +841,7 @@ a {
 
 @keyframes move-section-left {
   from {
-    left: -1500px;
+    left: 1500px;
   }
   to {
     left: 0px;

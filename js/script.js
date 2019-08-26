@@ -1,3 +1,4 @@
+
 function initSectionActive () {
   const link = document.querySelectorAll('[href^="#"]')
   const sections = document.querySelectorAll('[data-section="menu"]')
@@ -45,3 +46,21 @@ function initSectionActive () {
 initSectionActive ()
 
 
+function initMenuMobile() {
+  const menuMobile = document.querySelector('.menu-mobile')
+  const menuMobileClose  = document.querySelector('.menu-mobile-close')
+  const menu = document.querySelector('.list-menu')
+
+  menuMobile.addEventListener('click', ativarMenuMobile)
+  menuMobileClose.addEventListener('click', desativarMenuMobile)
+
+  function ativarMenuMobile() {
+      menu.classList.add('menu-mobile-ativo')
+  }
+
+  function desativarMenuMobile() {
+    menu.classList.remove('menu-mobile-ativo')
+  }
+}
+
+initMenuMobile()

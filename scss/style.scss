@@ -25,6 +25,12 @@ a {
   @include container;
 }
 
+@media only screen and (max-width: 1023px) {
+  .container {
+    @include container-768px;
+  }  
+}
+
 .cabecalho {
   background-color: rgba(26, 45, 75, 0.75);
   width: 100%;
@@ -45,8 +51,29 @@ a {
 
 .navegacao {
   .menu {
+    .menu-mobile {
+      display: none;
+      position: absolute;
+      font-size: 2em;
+      padding: 21px 25px;
+      right: 0;
+      &:hover {
+        background-color: rgba(26, 45, 75, 1);
+      }
+    }
     .list-menu {
       display: flex;
+      .menu-mobile-close {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 999;
+        margin: 5px;
+        padding: 10px;
+        font-size: 2em;
+        cursor: pointer;
+      }
       li {
         a {
           @include position-center;
@@ -63,6 +90,51 @@ a {
           background-color: $color-main;
           height: 100px;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .navegacao {
+    .menu {
+      .menu-mobile {
+        display: block;
+      }
+      .list-menu {
+        display: none;
+        background-color: rgba(26, 45, 75, 1);
+        width: 40vw;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        border-left: 2px solid white;
+        padding-top: 75px;
+        .menu-mobile-close {
+          display: block;
+        }
+        li {
+          a {
+            transition: width 1s ease;
+            &:hover{
+              background-color: rgba(225, 225, 225, 1);
+              color: rgba(26, 45, 75, 1);
+              height: 75px;
+              width: 100%;
+              font-weight: bold;
+            }
+          }
+          a.item-ativo {
+            background-color: rgba(225, 225, 225, 1);
+            color: rgba(26, 45, 75, 1);
+            height: 75px;
+            width: 100%;
+            font-weight: bold;
+          }
+        }
+      }
+      .list-menu.menu-mobile-ativo {
+        display: block;
       }
     }
   }
@@ -320,7 +392,7 @@ a {
 }
 
 @keyframes move-section-right  {
-  from {right: -1500px;}
+  from {right: 1500px;}
   to {right: 0px;}
 }
 
@@ -334,8 +406,7 @@ a {
   position: relative;
 }
 
-
 @keyframes move-section-left {
-  from {left: -1500px;}
+  from {left: 1500px;}
   to {left: 0px;}
 }

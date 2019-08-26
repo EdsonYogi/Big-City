@@ -1,6 +1,13 @@
 @mixin container {
   width: 1024px;
   margin: 0 auto;
+  padding: 0 10px;
+}
+
+@mixin container-768px {
+  width: 768px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 @mixin container-content {
@@ -55,3 +62,4 @@
   background-color: #856629;
   border: 1px solid white;
 }
+
