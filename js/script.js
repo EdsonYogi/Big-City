@@ -1,6 +1,6 @@
 function initSectionActive () {
-  const link = document.querySelectorAll('[href^="#"]')
-  const sections = document.querySelectorAll('[data-section="menu"]')
+  const link = document.querySelectorAll('.item-link')
+  const sections = document.querySelectorAll('.menu-section')
   
   let y = 0
 
