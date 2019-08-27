@@ -1,0 +1,29 @@
+.menu-section.section-active-right,
+.menu-section.section-active-left {
+  display: block;
+}
+
+.menu-section.section-active-left .content-animation{
+  display: block;
+  animation: move-section-left 1s;
+  animation-direction: alternate;
+  position: relative;
+}
+
+@keyframes move-section-left {
+  from {left: 100vh;}
+  to {left: 0%;}
+}
+
+.menu-section.section-active-right .content-animation{
+  display: block;
+  animation: move-section-right 1s;
+  animation-direction: alternate;
+  position: relative;
+}
+
+@keyframes move-section-right {
+  from {right: -100vh;}
+  to {right: 0%;}
+}
+

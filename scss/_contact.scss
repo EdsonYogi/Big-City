@@ -1,0 +1,83 @@
+.contact {
+  display: none;
+  .content {
+    display: none;
+    h1 {
+      @include title;
+      color: black;
+      background-color: white;
+      padding: 40px 50px;
+      margin-bottom: 40px;
+    }
+    .data {
+      @include position-center;
+      background-color: $color-main;
+      .info {
+        @include espacamento;
+        flex-direction: column;
+        height: 350px;
+        margin: 30px 0 30px 30px;
+        p {
+          @include texto;
+        }
+      }
+      .formulario {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 20px 30px;
+        .nome {
+          height: 50px;
+          padding: 0 20px;
+          margin: 10px 0;
+        }
+        .email {
+          height: 50px;
+          padding: 0 20px;
+          margin: 10px 0;
+        }
+        .message {
+          padding: 20px;
+          margin: 10px 0;
+          resize: none;
+        }
+        .enviar {
+          background-color: rgba(132, 102, 40, 1);
+          border: none;
+          font-size: 1.75em;
+          font-weight: 300;
+          color: white;
+          height: 50px;
+          width: 150px;
+          padding: 0 20px;
+          margin: 10px 0;
+          cursor: pointer;
+          transition: all 0.50s ease;
+          &:hover {
+            background-color: rgb(165, 138, 49);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contact {
+    .content {
+      margin-top: 100px;
+      .data {
+        display: block;
+        width: 100%;
+        .info {
+          padding: 10px;
+          margin: 0;
+        }
+        .formulario {
+          width: calc(100% - 20px);
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+}

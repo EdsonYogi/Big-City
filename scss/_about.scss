@@ -1,0 +1,134 @@
+.about {
+  display: none;
+  padding-top: 200px;
+  .content {
+    display: none;
+    //GROUP-ONE
+    .group-one {
+      @include espacamento;
+      .topic {
+        width: calc(50% - 25px);
+        .subtitle {
+          @include sub-title;
+          background-color: white;
+          padding: 20px 40px 75px 40px;
+        }
+        .text {
+          @include texto;
+          @include bf-azul;
+          width: calc(100% - 20px);
+          height: 270px;
+          margin: 0 auto;
+          padding: 30px;
+          position: relative;
+          top: -55px;
+          z-index: 1;
+        }
+      }
+    }
+    //GROUP-TWO
+    .group-two {
+      @include espacamento;
+      .topic {
+        width: calc(50% - 25px);
+        color: black;
+        background-color: white;
+        .subtitle {
+          @include sub-title;
+          padding: 40px 40px 10px 40px;
+        }
+        .text {
+          @include texto;
+          padding: 10px 40px 40px 40px;
+        }
+      }
+    }
+    //GROUP-THREE
+    .group-three {
+      @include espacamento;
+      .topic {
+        width: calc(33.33% - 15px);
+        .text {
+          @include texto;
+          padding: 30px 40px;
+          margin: 20px 0;
+          height: 300px;
+        }
+        .color-1 {
+          @include bf-azul;
+        }
+        .color-2 {
+          @include bf-dourado;
+        }
+        .color-3 {
+          background-color: white;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .about {
+    .content {
+      //GROUP-ONE
+      .group-one {
+        .topic {
+          .subtitle {
+            padding: 20px 20px 75px 20px;
+          }
+          .text {
+            height: auto;
+          }
+        }
+      }
+      //GROUP-THREE
+      .group-three {
+        .topic {
+          .text {
+            height: 400px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about {
+    .content {
+      //GROUP-ONE
+      .group-one {
+        display: block;
+        .topic {
+          width: 100%;
+          .text {
+            width: 100%;
+          }
+        }
+      }
+      //GROUP-TWO
+      .group-two {
+        display: block;
+        .topic {
+          margin-bottom: 20px;
+          width: 100%;
+        }
+      }
+      //GROUP-THREE
+      .group-three {
+        display: block;
+        .topic {
+          width: 100%;
+          .text {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

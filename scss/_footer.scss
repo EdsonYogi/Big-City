@@ -1,0 +1,12 @@
+.rodape {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  .copyright {
+    margin: 30px;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.50);
+    padding: 10px;
+  }
+}
